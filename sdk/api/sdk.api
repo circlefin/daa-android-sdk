@@ -1,0 +1,264 @@
+public final class com/circle/daa/sdk/DaaAuthKeyIdentity {
+	public fun <init> (Ljava/lang/String;Lcom/circle/daa/sdk/DaaEnvironment;Ljava/util/UUID;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcom/circle/daa/sdk/DaaEnvironment;
+	public final fun component3 ()Ljava/util/UUID;
+	public final fun copy (Ljava/lang/String;Lcom/circle/daa/sdk/DaaEnvironment;Ljava/util/UUID;)Lcom/circle/daa/sdk/DaaAuthKeyIdentity;
+	public static synthetic fun copy$default (Lcom/circle/daa/sdk/DaaAuthKeyIdentity;Ljava/lang/String;Lcom/circle/daa/sdk/DaaEnvironment;Ljava/util/UUID;ILjava/lang/Object;)Lcom/circle/daa/sdk/DaaAuthKeyIdentity;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAppId ()Ljava/lang/String;
+	public final fun getEnvironment ()Lcom/circle/daa/sdk/DaaEnvironment;
+	public final fun getInstallationId ()Ljava/util/UUID;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/circle/daa/sdk/DaaAuthKeyProtection : java/lang/Enum {
+	public static final field UserPresence Lcom/circle/daa/sdk/DaaAuthKeyProtection;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/circle/daa/sdk/DaaAuthKeyProtection;
+	public static fun values ()[Lcom/circle/daa/sdk/DaaAuthKeyProtection;
+}
+
+public final class com/circle/daa/sdk/DaaAuthKeyResolution : java/lang/Enum {
+	public static final field Created Lcom/circle/daa/sdk/DaaAuthKeyResolution;
+	public static final field Existing Lcom/circle/daa/sdk/DaaAuthKeyResolution;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/circle/daa/sdk/DaaAuthKeyResolution;
+	public static fun values ()[Lcom/circle/daa/sdk/DaaAuthKeyResolution;
+}
+
+public final class com/circle/daa/sdk/DaaDeviceAuthorizationSigningInput {
+	public fun <init> ([B)V
+}
+
+public final class com/circle/daa/sdk/DaaEnvironment : java/lang/Enum {
+	public static final field Production Lcom/circle/daa/sdk/DaaEnvironment;
+	public static final field Sandbox Lcom/circle/daa/sdk/DaaEnvironment;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getWireValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcom/circle/daa/sdk/DaaEnvironment;
+	public static fun values ()[Lcom/circle/daa/sdk/DaaEnvironment;
+}
+
+public final class com/circle/daa/sdk/DaaPrepareReceiptSignature {
+	public static final field INSTANCE Lcom/circle/daa/sdk/DaaPrepareReceiptSignature;
+	public final fun verify ([B[B[B)Z
+}
+
+public final class com/circle/daa/sdk/DaaRegisteredAuthKey {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;J)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()J
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;J)Lcom/circle/daa/sdk/DaaRegisteredAuthKey;
+	public static synthetic fun copy$default (Lcom/circle/daa/sdk/DaaRegisteredAuthKey;Ljava/lang/String;Ljava/lang/String;JILjava/lang/Object;)Lcom/circle/daa/sdk/DaaRegisteredAuthKey;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAuthKeyId ()Ljava/lang/String;
+	public final fun getOwnerBindingId ()Ljava/lang/String;
+	public final fun getRegisteredAtEpochMillis ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/circle/daa/sdk/DaaRegistrationAuthorizationSigningInput {
+	public fun <init> ([B)V
+}
+
+public final class com/circle/daa/sdk/DaaRegistrationFlowKey {
+	public static final field Companion Lcom/circle/daa/sdk/DaaRegistrationFlowKey$Companion;
+	public final fun publicKeySpkiBase64Url ()Ljava/lang/String;
+	public final fun signRegistrationAuthorization (Lcom/circle/daa/sdk/DaaRegistrationAuthorizationSigningInput;)[B
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/circle/daa/sdk/DaaRegistrationFlowKey$Companion {
+	public final fun generate ()Lcom/circle/daa/sdk/DaaRegistrationFlowKey;
+}
+
+public final class com/circle/daa/sdk/DaaRegistrationFlowKeyError : java/lang/Enum {
+	public static final field KeyGenerationFailed Lcom/circle/daa/sdk/DaaRegistrationFlowKeyError;
+	public static final field PublicKeyUnavailable Lcom/circle/daa/sdk/DaaRegistrationFlowKeyError;
+	public static final field SigningFailed Lcom/circle/daa/sdk/DaaRegistrationFlowKeyError;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/circle/daa/sdk/DaaRegistrationFlowKeyError;
+	public static fun values ()[Lcom/circle/daa/sdk/DaaRegistrationFlowKeyError;
+}
+
+public final class com/circle/daa/sdk/DaaRegistrationFlowKeyException : java/lang/Exception {
+	public final fun getError ()Lcom/circle/daa/sdk/DaaRegistrationFlowKeyError;
+}
+
+public final class com/circle/daa/sdk/DaaSdk {
+	public static final field INSTANCE Lcom/circle/daa/sdk/DaaSdk;
+	public static final field VERSION Ljava/lang/String;
+}
+
+public final class com/circle/daa/sdk/DaaSecureKey {
+	public fun <init> (Landroid/content/Context;Lcom/circle/daa/sdk/DaaAuthKeyIdentity;Lcom/circle/daa/sdk/DaaAuthKeyProtection;)V
+	public synthetic fun <init> (Landroid/content/Context;Lcom/circle/daa/sdk/DaaAuthKeyIdentity;Lcom/circle/daa/sdk/DaaAuthKeyProtection;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun acknowledgeRegistration (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun acknowledgeRegistration (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun publicKeySpkiBase64Url (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun resolveExisting (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun resolveOrCreate (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun signDeviceAuthorization (Lcom/circle/daa/sdk/DaaDeviceAuthorizationSigningInput;Landroidx/fragment/app/FragmentActivity;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun signRegistrationDeviceAuthorization (Lcom/circle/daa/sdk/DaaRegistrationAuthorizationSigningInput;Landroidx/fragment/app/FragmentActivity;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun thumbprint (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/circle/daa/sdk/DaaSecureKeyError : java/lang/Enum {
+	public static final field AuthKeyRegistrationRequired Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field AuthKeyThumbprintMismatch Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field AuthenticationFailed Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field DeviceCredentialNotSet Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field InvalidAppId Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field InvalidSigningInput Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field KeyAccessFailed Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field KeyCreationFailed Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field KeyInvalidated Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field KeyMetadataUnavailable Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field KeyMetadataVersionUnsupported Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field KeyNotFound Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field ProtectionMismatch Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field ProtectionUnavailable Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field PublicKeyUnavailable Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field ResolutionRequired Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field SecureHardwareUnavailable Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field SigningAlgorithmUnavailable Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field SigningFailed Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field SigningInputExpired Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static final field UserCancelled Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/circle/daa/sdk/DaaSecureKeyError;
+	public static fun values ()[Lcom/circle/daa/sdk/DaaSecureKeyError;
+}
+
+public final class com/circle/daa/sdk/DaaSecureKeyException : java/lang/Exception {
+	public final fun getError ()Lcom/circle/daa/sdk/DaaSecureKeyError;
+}
+
+public final class com/circle/daa/sdk/DaaSecureRandom {
+	public static final field INSTANCE Lcom/circle/daa/sdk/DaaSecureRandom;
+	public final fun bytes (I)[B
+}
+
+public final class com/circle/daa/sdk/sca/DaaSca {
+	public static final field INSTANCE Lcom/circle/daa/sdk/sca/DaaSca;
+	public static final field PROTOCOL_VERSION I
+	public final fun capabilities (Landroid/content/Context;Lcom/circle/daa/sdk/sca/DaaScaConfig;)Lcom/circle/daa/sdk/sca/DaaScaCapabilities;
+}
+
+public final class com/circle/daa/sdk/sca/DaaScaApproveContract : androidx/activity/result/contract/ActivityResultContract {
+	public fun <init> (Lcom/circle/daa/sdk/sca/DaaScaConfig;)V
+	public synthetic fun createIntent (Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
+	public fun createIntent (Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+	public fun parseResult (ILandroid/content/Intent;)Lcom/circle/daa/sdk/sca/DaaScaResult;
+	public synthetic fun parseResult (ILandroid/content/Intent;)Ljava/lang/Object;
+}
+
+public final class com/circle/daa/sdk/sca/DaaScaCallbackActivity : android/app/Activity {
+	public fun <init> ()V
+}
+
+public final class com/circle/daa/sdk/sca/DaaScaCapabilities {
+	public fun <init> (ILcom/circle/daa/sdk/sca/DaaScaSurface;ZLjava/lang/Boolean;Ljava/lang/Boolean;Z)V
+	public final fun component1 ()I
+	public final fun component2 ()Lcom/circle/daa/sdk/sca/DaaScaSurface;
+	public final fun component3 ()Z
+	public final fun component4 ()Ljava/lang/Boolean;
+	public final fun component5 ()Ljava/lang/Boolean;
+	public final fun component6 ()Z
+	public final fun copy (ILcom/circle/daa/sdk/sca/DaaScaSurface;ZLjava/lang/Boolean;Ljava/lang/Boolean;Z)Lcom/circle/daa/sdk/sca/DaaScaCapabilities;
+	public static synthetic fun copy$default (Lcom/circle/daa/sdk/sca/DaaScaCapabilities;ILcom/circle/daa/sdk/sca/DaaScaSurface;ZLjava/lang/Boolean;Ljava/lang/Boolean;ZILjava/lang/Object;)Lcom/circle/daa/sdk/sca/DaaScaCapabilities;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCallbackRegistered ()Z
+	public final fun getCallbackTaskIsolated ()Ljava/lang/Boolean;
+	public final fun getCallbackVerified ()Ljava/lang/Boolean;
+	public final fun getPlatformPasskeys ()Z
+	public final fun getProtocolVersion ()I
+	public final fun getSurface ()Lcom/circle/daa/sdk/sca/DaaScaSurface;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/circle/daa/sdk/sca/DaaScaConfig {
+	public static final field Companion Lcom/circle/daa/sdk/sca/DaaScaConfig$Companion;
+	public static final field DEFAULT_APPROVE_TIMEOUT_MILLIS J
+	public static final field DEFAULT_ENROLL_TIMEOUT_MILLIS J
+	public static final field MAXIMUM_TIMEOUT_MILLIS J
+	public static final field MINIMUM_TIMEOUT_MILLIS J
+	public fun <init> (Lcom/circle/daa/sdk/DaaEnvironment;Ljava/lang/String;Ljava/lang/String;JJ)V
+	public synthetic fun <init> (Lcom/circle/daa/sdk/DaaEnvironment;Ljava/lang/String;Ljava/lang/String;JJILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getApproveTimeoutMillis ()J
+	public final fun getCircleOrigin ()Ljava/lang/String;
+	public final fun getEnrollTimeoutMillis ()J
+	public final fun getEnvironment ()Lcom/circle/daa/sdk/DaaEnvironment;
+	public final fun getRedirectUri ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/circle/daa/sdk/sca/DaaScaConfig$Companion {
+}
+
+public final class com/circle/daa/sdk/sca/DaaScaEnrollContract : androidx/activity/result/contract/ActivityResultContract {
+	public fun <init> (Lcom/circle/daa/sdk/sca/DaaScaConfig;)V
+	public synthetic fun createIntent (Landroid/content/Context;Ljava/lang/Object;)Landroid/content/Intent;
+	public fun createIntent (Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+	public fun parseResult (ILandroid/content/Intent;)Lcom/circle/daa/sdk/sca/DaaScaResult;
+	public synthetic fun parseResult (ILandroid/content/Intent;)Ljava/lang/Object;
+}
+
+public final class com/circle/daa/sdk/sca/DaaScaError : java/lang/Enum {
+	public static final field AlreadyEnrolled Lcom/circle/daa/sdk/sca/DaaScaError;
+	public static final field Expired Lcom/circle/daa/sdk/sca/DaaScaError;
+	public static final field Protocol Lcom/circle/daa/sdk/sca/DaaScaError;
+	public static final field Transport Lcom/circle/daa/sdk/sca/DaaScaError;
+	public static final field Unsupported Lcom/circle/daa/sdk/sca/DaaScaError;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/circle/daa/sdk/sca/DaaScaError;
+	public static fun values ()[Lcom/circle/daa/sdk/sca/DaaScaError;
+}
+
+public abstract class com/circle/daa/sdk/sca/DaaScaResult {
+}
+
+public final class com/circle/daa/sdk/sca/DaaScaResult$Cancelled : com/circle/daa/sdk/sca/DaaScaResult {
+	public static final field INSTANCE Lcom/circle/daa/sdk/sca/DaaScaResult$Cancelled;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/circle/daa/sdk/sca/DaaScaResult$Completed : com/circle/daa/sdk/sca/DaaScaResult {
+	public final fun getResponse ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/circle/daa/sdk/sca/DaaScaResult$Failed : com/circle/daa/sdk/sca/DaaScaResult {
+	public final fun getError ()Lcom/circle/daa/sdk/sca/DaaScaError;
+	public final fun getMessage ()Ljava/lang/String;
+	public final fun getUnsupportedReason ()Lcom/circle/daa/sdk/sca/DaaScaUnsupportedReason;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/circle/daa/sdk/sca/DaaScaSurface : java/lang/Enum {
+	public static final field AuthTab Lcom/circle/daa/sdk/sca/DaaScaSurface;
+	public static final field CustomTab Lcom/circle/daa/sdk/sca/DaaScaSurface;
+	public static final field None Lcom/circle/daa/sdk/sca/DaaScaSurface;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/circle/daa/sdk/sca/DaaScaSurface;
+	public static fun values ()[Lcom/circle/daa/sdk/sca/DaaScaSurface;
+}
+
+public final class com/circle/daa/sdk/sca/DaaScaUnsupportedReason : java/lang/Enum {
+	public static final field AppLinkNotVerified Lcom/circle/daa/sdk/sca/DaaScaUnsupportedReason;
+	public static final field CallbackNotRouted Lcom/circle/daa/sdk/sca/DaaScaUnsupportedReason;
+	public static final field InsecureRedirect Lcom/circle/daa/sdk/sca/DaaScaUnsupportedReason;
+	public static final field NoAllowedBrowser Lcom/circle/daa/sdk/sca/DaaScaUnsupportedReason;
+	public static final field PasskeyUnavailable Lcom/circle/daa/sdk/sca/DaaScaUnsupportedReason;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/circle/daa/sdk/sca/DaaScaUnsupportedReason;
+	public static fun values ()[Lcom/circle/daa/sdk/sca/DaaScaUnsupportedReason;
+}
+

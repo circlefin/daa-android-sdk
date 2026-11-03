@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <activity
+            android:name="com.circle.daa.sdk.sca.ScaTestHostActivity"
+            android:exported="false" />
+        <!-- What a host app declares; see DaaScaCallbackActivity's KDoc. -->
+        <activity
+            android:name="com.circle.daa.sdk.sca.DaaScaCallbackActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <!--
+            Not autoVerify: example.com publishes no assetlinks.json for this test APK. The
+            tests start this activity by component, as the browser would after verification.
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="app.example.com"
+                    android:path="/sca/callback"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
