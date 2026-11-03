@@ -1,0 +1,33 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+    Package visibility (API 30+): without these the SCA ceremony cannot see a
+    Custom Tabs provider or a browser, and would report Unsupported on a device
+    that has both.
+    -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService" />
+        </intent>
+    </queries>
+
+    <application>
+        <!--
+        Not exported: only this app's own DaaScaCallbackActivity starts it with a
+        callback. singleTask so that start lands in onNewIntent on the instance
+        beneath the Custom Tab. DaaScaCallbackActivity is declared by the host app,
+        which alone knows its redirect URI.
+        -->
+        <activity
+            android:name=".sca.internal.ScaCeremonyActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    </application>
+</manifest>
